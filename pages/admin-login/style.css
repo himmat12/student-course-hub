@@ -1,0 +1,52 @@
+/* Login Container */
+.login-container {
+    width: 40%;
+    background-color: #ffffffbb;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    box-shadow: var(--box-shadow-two);
+    text-align: center;
+}
+
+.field-wrapper {
+    text-align: start;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 16px 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* error text style */
+
+.error-message {
+    padding: 20px;
+    display: none;
+    background-color: var(--primary-color);
+    text-align: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+}

@@ -1,0 +1,1 @@
+#### This directory holds all of our views "HTML documents" or pages `.html` files.

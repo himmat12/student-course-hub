@@ -1,0 +1,149 @@
+@import url('../../css/styles.css');
+@import url('../home/styles.css');
+
+
+:root {
+    --primary-color: #A6192E;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --light-text: #666;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.course-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.course-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.course-header .level {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.course-description h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.course-description p {
+    font-size: var(--font-size-lg);
+}
+
+
+.program-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.program-details p {
+    font-weight: 600;
+}
+
+.register-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.curriculum {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.curriculum h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.curriculum-years {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.year-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    align-content: start;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.year-block h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.curriculum-item {
+    padding: 10px 10px;
+    font-size: var(--font-size-lg);
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: var(--secondary-color);
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .curriculum-years {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .course-intro {
+        padding: 1.5rem;
+    }
+
+    .curriculum-years {
+        grid-template-columns: 1fr;
+    }
+
+    .course-header h1 {
+        font-size: var(--font-size-lg);
+        color: var(--secondary-color);
+    }
+
+    .program-details {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}

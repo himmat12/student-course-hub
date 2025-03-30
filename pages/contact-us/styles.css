@@ -1,0 +1,276 @@
+
+@import url('../../css/styles.css');
+@import url('../home/styles.css');
+
+
+
+/* footer styles */
+
+.footer {
+    background: #f4f4f4;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.footer-column {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a,
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* body {
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+} */
+
+/* Navbar Styles */
+.header-wrapper {
+    height: 80px;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+    background: #333;
+    align-items: center;
+}
+
+.header-wrapper .logo {
+    flex: 2;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.top-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 6;
+}
+
+.top-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.actions {
+    flex: 2;
+    text-align: right;
+}
+
+.signin-text {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Search Section Styles */
+.search-container {
+    background: #0D3B52;
+    padding: 20px;
+    color: white;
+    text-align: left, center;
+}
+
+.search-container h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.search-form select,
+.search-button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-button {
+    background: #C2185B;
+    color: white;
+    cursor: pointer;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #A6192E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO SECTION */
+.contact-hero {
+    background: linear-gradient(to right, #a6192e, #8a1523);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/*  CONTACT INFORMATION */
+.contact-section {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: #f7f7f7; /* soft pink tone */
+    padding: 20px 20px;
+}
+
+
+.contact-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.contact-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #C2185B;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+.contact-box {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-box h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.contact-box h3::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 50%;
+    background-color: #C2185B;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+
+/* .contact-box:hover {
+    transform: scale(1.02);
+} */
+
+.contact-box-wrapper {
+    background-color:  #ffff; /* or change to any color you want */
+    padding: 50px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+

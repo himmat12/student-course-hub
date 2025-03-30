@@ -1,0 +1,1 @@
+#### This directory hosts our initial UI/UX sketches drafts and illustrates, project progression before the frontend development. 

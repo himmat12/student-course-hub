@@ -1,0 +1,437 @@
+
+@import url('../../css/styles.css');
+@import url('../home/styles.css');
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Key Features */
+.key-features {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box i {
+    font-size: 2rem;
+    color: #3674B5;
+    margin-bottom: 10px;
+}
+/* Contact Us Section */
+.contact-us {
+    background: #2C3E50; /* Dark Blue Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contact-box {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-box a {
+    color: #3674B5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-box {
+        width: 90%;
+    }
+}
+
+/* footer styles */
+
+/* .footer {
+    background: #f4f4f4;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.footer-column {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a,
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+} */
+
+/* Global Styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+} */
+
+body {
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+/* Navbar Styles */
+/* .header-wrapper {
+    height: 80px;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+    background: #333;
+    align-items: center;
+}
+
+.header-wrapper .logo {
+    flex: 2;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.top-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 6;
+}
+
+.top-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.actions {
+    flex: 2;
+    text-align: right;
+}
+
+.signin-text {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+} */
+
+/* Search Section Styles */
+/* .search-container {
+    background: #0D3B52;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.search-container h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.search-form select,
+.search-button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-button {
+    background: #C2185B;
+    color: white;
+    cursor: pointer;
+} */
+
+/* Social Icons */
+/* .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #A6192E;
+} */
+
+/* History Section */
+.history-section {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.history-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #A6192E;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-box {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid transparent;
+}
+
+.history-box h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.history-box p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Highlight alternating boxes */
+.history-box.highlight {
+    border-left-color: #A6192E;
+}
+
+/* Quote Section */
+.history-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 30px;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-quote cite {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #A6192E;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .history-title {
+        font-size: 2rem;
+    }
+    
+    .history-box {
+        width: 90%;
+    }
+
+    .history-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .history-box p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.mission-box {
+    background: white;
+    padding: 25px;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-box h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mission-box p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.why-box {
+    background: white;
+    padding: 30px;
+    max-width: 900px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-box h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .mission-box,
+    .why-box {
+        width: 90%;
+    }
+}
+
+

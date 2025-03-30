@@ -1,0 +1,1 @@
+### The `db.sql` file has our main database in order to run this project you need to configure the SQL scripts from `db.sql` file. The `example-data.sql` file is kept just for reference of original database sample provided by uni and the `sql-scripts.sql` file holds all SQL query stqtements experimented during development of backend and `REST` api in `PHP`.

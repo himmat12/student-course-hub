@@ -1,0 +1,200 @@
+@import url('../../css/styles.css');
+
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 12fr;
+    grid-template-areas: "navbar mainContent";
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* sidebar styles */
+.navbar {
+    grid-area: navbar;
+    background-color: var(--primary-color);
+}
+
+.main-content {
+    color: var(--secondary-font-color);
+    grid-area: mainContent;
+}
+
+
+.navbar-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-top-section {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 0px 20px;
+    margin-bottom: 12px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    border-bottom: 1px solid #545c63;
+    letter-spacing: 0.5px;
+}
+
+/* sidebar menu items styles */
+
+.menu-item {
+    height: 70px;
+    padding: 0px 20px;
+    cursor: pointer;
+    align-content: center;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: white;
+    border-bottom: 1px solid #545c63;
+
+    &:hover {
+        transition-duration: 0.2s;
+        background-color: var(--blue);
+        color: white;
+
+    }
+
+    &:active {
+        background-color: var(--blue);
+        color: white;
+    }
+
+}
+
+.sidebar-link[tabindex]:focus {
+    background-color: var(--blue);
+    color: white;
+}
+
+
+/* header section styles */
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: var(--box-shadow-two);
+    border-radius: var(--border-radius-btn);
+}
+
+
+.header-section .trailing {
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.header-section .leading {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xl);
+    color: var(--secondary-font-color);
+}
+
+.avatar img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.logout-btn {
+    margin-top: auto;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    padding: 12px 20px;
+    margin: 20px;
+    border-radius: var(--border-radius-btn);
+}
+
+
+/* menu item sections styles */
+
+.main-section {
+    padding: 20px 20px;
+    /* background-color: blue; */
+}
+
+.main-section .header-text {
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 20px;
+
+}
+
+/* dashboard section styles */
+.main-content .header-text {
+    margin: 30px 0px 30px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.gridview-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-xl);
+    border-radius: var(--border-radius-btn);
+    box-shadow: var(--box-shadow-two);
+
+}
+
+.digit-text {
+    font-weight: var(--font-weight-bold);
+    color: var(--blue);
+    font-size: 50px;
+}
+
+.subtitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item-top-row {
+        grid-template-columns: 50px 1fr;
+        gap: 10px;
+    }
+
+    .list-header {
+        grid-template-columns: 50px 1fr;
+    }
+
+    .item-bottom-row {
+        flex-wrap: wrap;
+    }
+
+    .action-btn {
+        flex: 1;
+        min-width: calc(50% - 5px);
+    }
+}

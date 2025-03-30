@@ -1,0 +1,1 @@
+### this directory consists of misc experiments files and demo src code while doing research on various features such as api integration, search and filter functionlaity with js and DOM and

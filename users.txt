@@ -1,0 +1,21 @@
+-- Users and previlages 
+DROP USER IF EXISTS 'admin'@'localhost';
+DROP USER IF EXISTS 'staff'@'localhost';
+DROP USER IF EXISTS 'web_app'@'localhost';
+
+CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON student_course_hub.* TO 'admin'@'localhost';
+
+CREATE USER IF NOT EXISTS 'staff'@'localhost' IDENTIFIED BY 'staff';
+GRANT SELECT ON student_course_hub.* TO 'staff'@'localhost';
+GRANT UPDATE ON student_course_hub.users TO 'staff'@'localhost';
+
+CREATE USER IF NOT EXISTS 'web_app'@'localhost' IDENTIFIED BY 'web_app';
+GRANT SELECT ON `student_course_hub`.* TO `web_app`@`localhost`;
+GRANT INSERT ON student_course_hub.interestedstudents TO 'web_app'@'localhost';
+
+FLUSH PRIVILEGES;
+
+SHOW GRANTS FOR 'admin'@'localhost';
+SHOW GRANTS FOR 'staff'@'localhost';
+SHOW GRANTS FOR 'web_app'@'localhost';

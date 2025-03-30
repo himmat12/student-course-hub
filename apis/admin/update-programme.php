@@ -1,0 +1,119 @@
+<?php
+// api to update programmes for admin 
+
+require_once '../../config.php';
+include '../db_connect.php';
+
+
+// database connection
+$pdo = createDbConnection('admin');
+
+// validating connection
+if (!$pdo) {
+    header('HTTP/1.1 500 Internal Server Error');
+    header('Content-Type: application/json');
+    echo json_encode(['message' => 'Database connection failed']);
+    exit;
+}
+
+// validating to only process POST requests
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('HTTP/1.1 405 Method Not Allowed');
+    header('Content-Type: application/json');
+    echo json_encode(['message' => 'Method not allowed']);
+    exit;
+}
+
+// get POST data (JSON) from input stream (making our api versatile to be accessed outside of html like postman for testing or other platforms like mobile applications)
+$data = json_decode(file_get_contents('php://input'), true);
+
+// if data is null (not valid JSON), try to use $_POST
+if ($data === null) {
+    $data = $_POST;
+}
+
+// validating required fields
+$requiredFields = ['ProgrammeID', 'ProgrammeName', 'LevelID', 'ProgrammeLeaderID', 'Description', 'Status'];
+$missingFields = [];
+
+
+foreach ($requiredFields as $field) {
+    if (empty(isset($data[$field]))) {
+        $missingFields[] = $field;
+    }
+}
+
+if (!empty($missingFields)) {
+    header('HTTP/1.1 400 Bad Request');
+    header('Content-Type: application/json');
+    echo json_encode([
+        'message' => 'Missing required fields',
+        'fields' => $missingFields
+    ]);
+    exit;
+}
+
+// cleaning input data 
+$programmeID = (int)$data['ProgrammeID'];
+$programmeName = htmlspecialchars(trim($data['ProgrammeName']));
+$levelID = (int)$data['LevelID'];
+$programmeLeaderID = (int)$data['ProgrammeLeaderID'];
+$description = htmlspecialchars(trim($data['Description']));
+$image = htmlspecialchars(trim($data['Image']));
+$status = (int)$data['Status'];
+
+
+try {
+    $sql = "UPDATE
+    programmes
+SET
+    ProgrammeName = :ProgrammeName,
+    LevelID = :LevelID,
+    ProgrammeLeaderID = :ProgrammeLeaderID,
+    Description = :Description,
+    Image = :Image,
+	Status = :Status
+WHERE
+    programmes.ProgrammeID = :ProgrammeID;";
+
+    $stmt = $pdo->prepare($sql);
+
+    // binding parameters
+    $stmt->bindParam(':ProgrammeID', $programmeID, PDO::PARAM_INT);
+    $stmt->bindParam(':ProgrammeName', $programmeName, PDO::PARAM_STR);
+    $stmt->bindParam(':LevelID', $levelID, PDO::PARAM_INT);
+    $stmt->bindParam(':ProgrammeLeaderID', $programmeLeaderID, PDO::PARAM_INT);
+    $stmt->bindParam(':Description', $description, PDO::PARAM_STR);
+    $stmt->bindParam(':Image', $image, PDO::PARAM_STR);
+    $stmt->bindParam(':Status', $status, PDO::PARAM_INT);
+
+    $success = $stmt->execute();
+
+    if ($success) {
+
+        // returning success response along with submitted form data
+        header('HTTP/1.1 201 Created');
+        header('Content-Type: application/json');
+        echo json_encode([
+            'message' => 'Programme update successful',
+            'programmeID' => $programmeID,
+            'data' => $data
+        ]);
+    } else {
+        throw new PDOException("Failed to insert record");
+    }
+} catch (PDOException $e) {
+    // logging the error in production environment
+    error_log("Interest registration failed: " . $e->getMessage());
+
+    // returning error response
+    header('HTTP/1.1 500 Internal Server Error');
+    header('Content-Type: application/json');
+    echo json_encode([
+        'message' => 'Registration failed',
+        'error' => $e->getMessage()
+    ]);
+} finally {
+    // closing the database connection by setting pdo value to null
+    $pdo = null;
+}
