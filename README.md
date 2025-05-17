@@ -4,6 +4,8 @@
 
 You can check the demo [here](https://student-course-hub-team-a.great-site.net/?i=1).
 
+A university web application for prospective students. This is a full-stack web application project build on AMP (Apache, MariaDB, and PHP) stack, and developed purely in HTML, CSS, and AJAX. The project architecture is separated into three layers backend (base layer), RESTful api (bridge layer) and frontend (interface layer).
+
 # Student Course Hub user (admin/staff) credentials
 
 ### Admin User
