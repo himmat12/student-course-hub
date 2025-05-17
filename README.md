@@ -1,6 +1,8 @@
 # Student Course Hub starter
 
-> Important notice: Himmat has made some changes just for demo.
+> Important notice: This repo is a group project for my university coursework. I specially worked on backend development which includes database design, api development and admin dashboard.
+
+You can check the demo [here](https://student-course-hub-team-a.great-site.net/?i=1).
 
 This repository is provided as a starting point for your assignment.
 It doesn't provide anything particularly useful but avoids the problems associated with starting with a blank repository.
