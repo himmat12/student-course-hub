@@ -1,6 +1,6 @@
 # Student Course Hub starter
 
-> Important notice: This repo is a group project for my university coursework. I specially worked on backend development which includes database design, api development and admin dashboard.
+> Important notice: This repo was a group project for my university coursework. I specially worked on backend development which includes database design, api development and admin dashboard.
 
 You can check the demo [here](https://student-course-hub-team-a.great-site.net/?i=1).
 
